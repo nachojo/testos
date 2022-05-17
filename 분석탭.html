@@ -85,7 +85,7 @@
             height: 673px;
             position: static;
             font-family: 'Nanum Gothic Coding', monospace;
-            padding-top: 80px;
+            padding-top: 70px;
         }
         .maincontainer{
             width: 100%;
@@ -113,6 +113,14 @@
             margin-top:20px; margin-left:7%;
             font-weight:300; font-size:1.4rem; letter-spacing: 3px;
         }
+        .but {
+            margin-left:7%; margin-top:20px; font-family: 'Gowun Dodum', sans-serif;
+            font-weight:400; font-size:1rem; letter-spacing: 1px;
+            background-color:rgb(64, 88, 130); color:white;
+            border : 1px solid rgb(64, 88, 130);
+            border-radius:5px; padding: 7px; padding-left:20px;padding-right:20px;
+            cursor: pointer;
+        }
     </style>
     <script>
         function scroll_ev1(){
@@ -126,6 +134,9 @@
         function scroll_ev3(){
             const move_sw = document.querySelector("#sel_thr").offsetTop;
             window.scrollTo({ top: move_sw, behavior:"smooth" });
+        }
+        function totop(){
+            window.scrollTo({ top:0, left:0, behavior:"smooth" });
         }
     </script>
 </head>
@@ -157,6 +168,7 @@
             <p>1. 분석 정보 (글 or 이미지)</p>
             <p>2. 분석 정보 (글 or 이미지)</p>
             <p>3. 분석 정보 (글 or 이미지)</p>
+            <button class = "but" onclick="totop()"> 상단으로 </button>
         </div>
         <div class="container" id = "sel_two">
             <h1>운동량 vs 이동거리</h1>
@@ -164,6 +176,7 @@
             <p>1. 분석 정보 (글 or 이미지)</p>
             <p>2. 분석 정보 (글 or 이미지)</p>
             <p>3. 분석 정보 (글 or 이미지)</p>
+            <button class = "but" onclick="totop()"> 상단으로 </button>
         </div>
         <div class="container" id = "sel_thr">
             <h1>성별/연령별 이용률</h1>
@@ -171,6 +184,7 @@
             <p>1. 분석 정보 (글 or 이미지)</p>
             <p>2. 분석 정보 (글 or 이미지)</p>
             <p>3. 분석 정보 (글 or 이미지)</p>
+            <button class = "but" onclick="totop()"> 상단으로 </button>
         </div>
     </main>
 </body>
