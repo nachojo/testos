@@ -108,6 +108,7 @@
             background-color:rgb(64, 88, 130); color:white;
             border : 1px solid rgb(64, 88, 130);
             border-radius:5px; padding: 3px; padding-left:20px;padding-right:20px;
+            cursor: pointer;
         }
         .content .but_1{
             margin-left:7%; margin-top:20px; font-family: 'Gowun Dodum', sans-serif;
@@ -115,6 +116,7 @@
             background-color:rgb(64, 88, 130); color:white;
             border : 1px solid rgb(64, 88, 130);
             border-radius:5px; padding: 7px; padding-left:20px;padding-right:20px;
+            cursor: pointer;
         }
         .content .but_2{
             
@@ -122,8 +124,9 @@
             background-color:rgb(64, 88, 130); color:white;
             border : 1px solid rgb(64, 88, 130);
             border-radius:5px; padding: 7px; padding-left:20px;padding-right:20px;
+            cursor: pointer;
         }
-        #maincontent .but:hover{
+        /*#maincontent .but:hover{
             color:white;
             background-color:rgb(14, 42, 90);
         }
@@ -138,9 +141,25 @@
         .but>a:visited,.but_1>a:visited, .but_2>a:visited{
             color: white;
             text-decoration: none;
-        }
-
+        }*/
     </style>
+    <script type="text/javascript">
+        function scroll_ev1(){
+            const move_sw = document.querySelector("#user").offsetTop;
+            window.scrollTo({ top: move_sw, behavior:"smooth" });
+        }
+        function scroll_ev2(){
+            const move_sw = document.querySelector("#dis").offsetTop;
+            window.scrollTo({ top: move_sw, behavior:"smooth" });
+        }
+        function scroll_ev3(){
+            const move_sw = document.querySelector("#gen").offsetTop;
+            window.scrollTo({ top: move_sw, behavior:"smooth" });
+        }
+        /*function totop(){
+            window.scrollTo({ top:0, left:0, behavior:"smooth" });
+        }*/
+    </script>
 </head>
 <body>
     <header id = "menubar">
@@ -151,7 +170,7 @@
                     <li class="mainmenu"><a href = "region.html">region</a>
 
                     </li>
-                    <li class="mainmenu"><a href = "분석탭.html">sub-analysis</a>
+                    <li class="mainmenu"><a href = "sub.html">sub-analysis</a>
                     </li>
                 </ul>
             </nav>
@@ -161,9 +180,9 @@
     <div id = "maincontent">
         <h1>Sub Analysis</h1>
         <h2> 서울 각 구의 따릉이 상세 정보를 볼 수 있습니다</h2>
-        <p>1. 신규 가입 vs 실제 이용자 <button class = "but"><a href="#user"> go to detail ></a></button></p>
-        <p>2. 운동량 vs 이동거리 <button class = "but"><a href="#dis"> go to detail ></a></button></p>
-        <p>3. 성별/연령별 이용률 <button class = "but"><a href="#gen"> go to detail ></a></button></p>
+        <p>1. 신규 가입 vs 실제 이용자 <button class = "but" onclick="scroll_ev1()"> go to detail ></button></p>
+        <p>2. 운동량 vs 이동거리 <button class = "but" onclick="scroll_ev2()"> go to detail ></button></p>
+        <p>3. 성별/연령별 이용률 <button class = "but" onclick="scroll_ev3()"> go to detail ></button></p>
     </div>
     <div class = "content" id = "user">
         <h1>신규 가입 vs 실제 이용자</h1>
@@ -171,8 +190,8 @@
         <p>1. 분석 정보 (글 or 이미지)</p>
         <p>2. 분석 정보 (글 or 이미지)</p>
         <p>3. 분석 정보 (글 or 이미지)</p>
-        <button class = "but_1"><a href="#dis"> 운동량 vs 이동거리 ></a></button>
-        <button class = "but_2"><a href="#gen"> 성별 / 연령별 이용률 ></a></button>
+        <button class = "but_1" onclick="scroll_ev2()"> 운동량 vs 이동거리 ></button>
+        <button class = "but_2" onclick="scroll_ev3()"> 성별 / 연령별 이용률 ></button>
     </div>
     <div class = "content" id = "dis">
         <h1>운동량 vs 이동거리</h1>
@@ -180,8 +199,8 @@
         <p>1. 분석 정보 (글 or 이미지)</p>
         <p>2. 분석 정보 (글 or 이미지)</p>
         <p>3. 분석 정보 (글 or 이미지)</p>
-        <button class = "but_1"><a href="#user"> 신규 가입 vs 실제 이용자 ></a></button>
-        <button class = "but_2"><a href="#gen"> 성별 / 연령별 이용률 ></a></button>
+        <button class = "but_1" onclick="scroll_ev1()"> 신규 가입 vs 실제 이용자 ></button>
+        <button class = "but_2" onclick="scroll_ev3()"> 성별 / 연령별 이용률 ></button>
     </div>
     <div class = "content" id = "gen">
         <h1>성별/연령별 이용률</h1>
@@ -189,8 +208,8 @@
         <p>1. 분석 정보 (글 or 이미지)</p>
         <p>2. 분석 정보 (글 or 이미지)</p>
         <p>3. 분석 정보 (글 or 이미지)</p>
-        <button class = "but_1"><a href="#user"> 신규 가입 vs 실제 이용자 ></a></button>
-        <button class = "but_2"><a href="#dis"> 운동량 vs 이동거리 ></a></button>
+        <button class = "but_1" onclick="scroll_ev1()"> 신규 가입 vs 실제 이용자 ></button>
+        <button class = "but_2" onclick="scroll_ev2()"> 운동량 vs 이동거리 ></button>
     </div>
     
 </body>
