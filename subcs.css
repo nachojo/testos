@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>따릉이</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Gothic+Coding:wght@400;700&family=Noto+Sans+KR:wght@100;300;400;500&family=Water+Brush&display=swap" rel="stylesheet">
-    <!-- <meta name="viewport" content="width=device-width, height=device-height,initial-scale=1.0"> -->
-    <style>
+@charset "utf-8";
         header>h1{
             margin-left:3%;
             font-family: 'Water Brush', cursive;
@@ -95,11 +85,16 @@
             margin-top:120px;
             font-size:4.4rem;
         }
-        .content>h1{
+        #user>h1{
             font-family: 'Noto Sans KR', sans-serif;
-            margin-top:10px;
+            margin-top:35px;
             font-size:2.5rem;
         }
+#gen > h1, #dis > h1{
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-top:150px;
+    font-size:2.5rem;
+}
         #maincontent>h2{
             font-family: 'Noto Sans KR', sans-serif;
             margin-top:20px; margin-bottom: 30px;
@@ -107,7 +102,7 @@
         }
         .content>h2{
             font-family: 'Noto Sans KR', sans-serif;
-            margin-top: 10px; margin-bottom: 10px;
+            margin-bottom: 50px;
             font-weight:500; font-size:1.2rem; letter-spacing: 3px;
         }
         .#dis > p, #gen > p{
@@ -185,125 +180,25 @@
             border-radius: 50%;
             cursor: pointer;
         }
+        .slidebox .slideitem label:hover{
+            opacity: 0.5;
+            }
         label.left{
-            left: 40px;
+            left: 20px;
             background-color: #ffffff;
             background-image: url('left.png');
             background-position: center center;
-            background-size: 50%;
+            background-size: 80%;
             background-repeat: no-repeat;
         }
         label.right{
-            right: 40px;
+            right: 60px;
             background-color: #ffffff;
             background-image: url('right.png');
             background-position: center center;
-            background-size: 50%;
+            background-size: 80%;
             background-repeat: no-repeat;
         }
         [id="slide01"]:checked ~ .slidelist .slideitem {transform:translateX(0);animation:slide01 20s infinite;}
         [id="slide02"]:checked ~ .slidelist .slideitem {transform:translateX(-100%);}
         [id="slide03"]:checked ~ .slidelist .slideitem {transform:translateX(-200%);}
-    </style>
-    <script type="text/javascript">
-        function scroll_ev1(){
-            const move_sw = document.querySelector("#user").offsetTop;
-            window.scrollTo({ top: move_sw, behavior:"smooth" });
-        }
-        function scroll_ev2(){
-            const move_sw = document.querySelector("#dis").offsetTop;
-            window.scrollTo({ top: move_sw, behavior:"smooth" });
-        }
-        function scroll_ev3(){
-            const move_sw = document.querySelector("#gen").offsetTop;
-            window.scrollTo({ top: move_sw, behavior:"smooth" });
-        }
-        /*function totop(){
-            window.scrollTo({ top:0, left:0, behavior:"smooth" });
-        }*/
-    </script>
-</head>
-<body>
-    <header id = "menubar">
-        <h1 id = "main"><a href = "main.html">Seoul Bike - subanalysis</a></h1>
-        <nav id = "menu">
-            <nav>
-                <ul id="main1">
-                    <li class="mainmenu"><a href = "region.html">region</a>
-
-                    </li>
-                    <li class="mainmenu"><a href = "sub.html">sub-analysis</a>
-                    </li>
-                </ul>
-            </nav>
-        </nav>
-    </header>
-
-    <div id = "maincontent">
-        <h1>Sub Analysis</h1>
-        <hr>
-        <h2> 서울 각 구의 따릉이 상세 정보를 볼 수 있습니다</h2>
-        <p>1. 신규 가입 vs 실제 이용자 <button class = "but" onclick="scroll_ev1()"> go to detail ></button></p>
-        <p>2. 운동량 vs 이동거리 <button class = "but" onclick="scroll_ev2()"> go to detail ></button></p>
-        <p>3. 성별/연령별 이용률 <button class = "but" onclick="scroll_ev3()"> go to detail ></button></p>
-    </div>
-    <div class = "content" id = "user">
-        <h1>신규 가입 vs 실제 이용자</h1>
-        <h2> 따릉이 신규 가입에 대한 실제 이용자 수를 확인할 수 있습니다</h2>
-        <div class="slidebox">
-            <input type="radio" name="slide" id="slide01">
-            <input type="radio" name="slide" id="slide02">
-            <input type="radio" name="slide" id="slide03">
-            <ul class="slidelist">
-                <li class="slideitem">
-                    <div>
-                        <label for="slide03" class="left"></label>
-                        <label for="slide02" class="right"></label>
-                        <a><img src="ex_1.png"></a>
-                        <p>분석 1에 대한 설명</p>
-                    </div>
-                </li>
-                <li class="slideitem">
-                    <div>
-                        <label for="slide01" class="left"></label>
-                        <label for="slide03" class="right"></label>
-                        <a><img src="ex_2.png"></a>
-                        <p>분석 2에 대한 설명</p>
-                    </div>
-                </li>
-                <li class="slideitem">
-                    <div>
-                        <label for="slide02" class="left"></label>
-                        <label for="slide01" class="right"></label>
-                        <a><img src="ex_3.png"></a>
-                        <p>분석 3에 대한 설명</p>
-                    </div>
-                </li>
-            
-            </ul>
-            
-        </div>
-        <button class = "but_1" onclick="scroll_ev2()"> 운동량 vs 이동거리 ></button>
-        <button class = "but_2" onclick="scroll_ev3()"> 성별 / 연령별 이용률 ></button>
-    </div>
-    <div class = "content" id = "dis">
-        <h1>운동량 vs 이동거리</h1>
-        <h2> 따릉이를 통한 운동량과 이동 거리의 상관관계를 확인할 수 있습니다</h2>
-        <p>1. 분석 정보 (글 or 이미지)</p>
-        <p>2. 분석 정보 (글 or 이미지)</p>
-        <p>3. 분석 정보 (글 or 이미지)</p>
-        <button class = "but_1" onclick="scroll_ev1()"> 신규 가입 vs 실제 이용자 ></button>
-        <button class = "but_2" onclick="scroll_ev3()"> 성별 / 연령별 이용률 ></button>
-    </div>
-    <div class = "content" id = "gen">
-        <h1>성별/연령별 이용률</h1>
-        <h2> 따릉이 이용률을 성별과 연령을 중심으로 확인할 수 있습니다.</h2>
-        <p>1. 분석 정보 (글 or 이미지)</p>
-        <p>2. 분석 정보 (글 or 이미지)</p>
-        <p>3. 분석 정보 (글 or 이미지)</p>
-        <button class = "but_1" onclick="scroll_ev1()"> 신규 가입 vs 실제 이용자 ></button>
-        <button class = "but_2" onclick="scroll_ev2()"> 운동량 vs 이동거리 ></button>
-    </div>
-    
-</body>
-</html>
