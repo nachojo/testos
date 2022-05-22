@@ -22,7 +22,7 @@
             color:rgb(82, 82, 82); font-size: 1.15rem;
         }
         header{
-            height: 45px;
+            height: 40px;
             width:100%;
             padding: 1rem;
             font-weight: bold;
@@ -36,8 +36,15 @@
             z-index: 2;
         }
         body{
-            padding-top:68px
+            padding-top:60px;
+            background-color: rgb(46, 190, 72);
+            margin-left: 0; margin-right: 0;
+            padding-left: 0; padding-right: 0;
         }
+html{
+    margin-left: 0; margin-right: 0;
+    padding-left: 0; padding-right: 0;
+}
         #menu{
             width: 30%; text-align:center;
         }  
@@ -68,45 +75,66 @@
         }
         #maincontent{
             width: 100%;
-            height: 450px;
-            margin-bottom: 217px;
+            height: 550px;
+            padding-top: .01px;
             position:static;
             font-family: 'Nanum Gothic Coding', monospace;
             /* border: 4px solid red; */
-            background-color: #FDF7BC;
-            background-image: url('bg1.png');
-            background-position: 740px 40px;
+            background-color: white;
+            background-image: url('subimg/bg1.png');
+            background-position: 105% 130px;
             background-size: 50%;
             background-repeat: no-repeat;
         }
         #maincontent>h1{
             /* font-family: 'Noto Sans KR', sans-serif; */
-            padding-top: 50px;
-            font-size:4.4rem;
-            margin-top: 0px;
-            margin-left: 7%;
+            text-align: center;
+            color:rgb(13, 97, 51);
+            font-size:2rem;
+            margin-top: 15px;
+            margin-bottom: 25px;
         }
         #user>h1{
             font-family: 'Noto Sans KR', sans-serif;
-            margin-top:35px;
-            font-size:2.5rem;
+            text-align: center;
+            color: white;
+            font-size:2rem;
+            margin-top: 15px;
+            margin-bottom: 15px;
         }
+.f_sector{
+    width: 100%;
+    height:112px;
+    background-color: transparent;
+    cursor: pointer;
+    background-image: url('subimg/bycicle.png');
+    background-size: 4%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
 #gen > h1, #dis > h1{
     font-family: 'Noto Sans KR', sans-serif;
-    margin-top:150px;
-    font-size:2.5rem;
+    text-align: center;
+    color: white;
+    font-size:2rem;
+    margin-top: 15px;
+    margin-bottom: 25px;
 }
         #maincontent>h2{
             font-family: 'Noto Sans KR', sans-serif;
-            margin-bottom: 30px;
-            font-weight:500; font-size:1.6rem; letter-spacing: 3px;
-            margin-left: 7%;
+            margin-top: 40px;
+            line-height: 0.5em;
+            font-weight:500; font-size:0.9rem; letter-spacing: 3px;
+            text-align: center;
             
         }
         .content>h2{
             font-family: 'Noto Sans KR', sans-serif;
-            margin-bottom: 50px;
-            font-weight:500; font-size:1.2rem; letter-spacing: 3px;
+            color: white;
+            margin-top: 10px;
+            line-height: 0.5em;
+            font-weight:300; font-size:0.9rem; letter-spacing: 3px;
+            text-align: center;
         }
         .#dis > p, #gen > p{
             font-family: 'Noto Sans KR', sans-serif;
@@ -116,6 +144,7 @@
 #maincontent .btns{
     display: flex;
     justify-content: space-between;
+    margin-top: 8%;
     margin-left: 25%;
     margin-right: 25%;
 }
@@ -124,7 +153,6 @@
             text-align: center;
             width: 30%;
             height: 200px;
-            margin-top: 18%;
             font-size:0.9rem; letter-spacing: 1px; font-weight:500;
             background-color:white; color:slategray;
             border : 4px solid rgb(46, 190, 72);
@@ -133,24 +161,32 @@
         }
 #mbt1{
     background-color: floralwhite;
-    background-image: url('pie-chart.png');
+    background-image: url('subimg/pie-chart.png');
     background-position: 50% 30%;
     background-size: 50%;
     background-repeat: no-repeat;
 }
 #mbt2{
     background-color: floralwhite;
-    background-image: url('pie-chart.png');
+    background-image: url('subimg/pie-chart.png');
     background-position: 50% 30%;
     background-size: 50%;
     background-repeat: no-repeat;
 }
 #mbt3{
     background-color: floralwhite;
-    background-image: url('pie-chart.png');
+    background-image: url('subimg/pie-chart.png');
     background-position: 50% 30%;
     background-size: 50%;
     background-repeat: no-repeat;
+}
+#user .but{
+    margin-top: 40px; font-family: 'Gowun Dodum', sans-serif;
+    font-weight:900; font-size:1rem; letter-spacing: 1px;
+    background-color: white; color: rgb(46, 190, 72);
+    border : 1px solid rgb(46, 190, 72);
+    border-radius:5px; padding: 7px; padding-left:20px;padding-right:20px;
+    cursor: pointer;
 }
         .content .but_1{
             margin-top:20px; font-family: 'Gowun Dodum', sans-serif;
@@ -160,6 +196,7 @@
             border-radius:5px; padding: 7px; padding-left:20px;padding-right:20px;
             cursor: pointer;
         }
+
         .content .but_2{
             
             font-weight:400; font-size:1rem; letter-spacing: 1px; margin-top:20px; font-family: 'Gowun Dodum', sans-serif;
@@ -180,9 +217,10 @@
         }
         [name="slide"] {display:none;}
         .slidebox{
-            max-width: 1000px;
+
             width: 100%;
             margin: 0 auto;
+            background-color: white;
         }
         .slidebox img {max-width:100%;}
         .slidebox .slidelist{
@@ -214,7 +252,7 @@
         label.left{
             left: 20px;
             background-color: #ffffff;
-            background-image: url('left.png');
+            background-image: url('subimg/left.png');
             background-position: center center;
             background-size: 80%;
             background-repeat: no-repeat;
@@ -222,7 +260,7 @@
         label.right{
             right: 60px;
             background-color: #ffffff;
-            background-image: url('right.png');
+            background-image: url('subimg/right.png');
             background-position: center center;
             background-size: 80%;
             background-repeat: no-repeat;
