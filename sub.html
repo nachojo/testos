@@ -45,11 +45,12 @@
 
     <div id = "maincontent">
         <h1>Sub Analysis</h1>
-        <hr>
-        <h2> 서울 각 구의 따릉이 상세 정보를 볼 수 있습니다</h2>
-        <p>1. 신규 가입 vs 실제 이용자 <button class = "but" onclick="scroll_ev1()"> go to detail ></button></p>
-        <p>2. 운동량 vs 이동거리 <button class = "but" onclick="scroll_ev2()"> go to detail ></button></p>
-        <p>3. 성별/연령별 이용률 <button class = "but" onclick="scroll_ev3()"> go to detail ></button></p>
+        <h2>서울 각 구의 따릉이 상세 정보를 볼 수 있습니다</h2>
+        <div class="btns">
+            <button class = "but" id="mbt1" onclick="scroll_ev1()">신규 가입 vs 실제 이용자</button>
+            <button class = "but" id="mbt2" onclick="scroll_ev2()">운동량 vs 이동거리</button>
+            <button class = "but" id="mbt3" onclick="scroll_ev3()">성별/연령별 이용률</button>
+        </div>
     </div>
     <div class = "content" id = "user">
         <h1>신규 가입 vs 실제 이용자</h1>
