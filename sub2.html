@@ -43,6 +43,7 @@
             position: fixed;
             border-bottom: solid 1px black;
             top:0; left:0;
+            z-index: 2;
         }
         body{
             padding-top:68px
@@ -96,7 +97,7 @@
         }
         .content>h1{
             font-family: 'Noto Sans KR', sans-serif;
-            margin-top:20px;
+            margin-top:10px;
             font-size:2.5rem;
         }
         #maincontent>h2{
@@ -106,20 +107,13 @@
         }
         .content>h2{
             font-family: 'Noto Sans KR', sans-serif;
-            margin-top:10px; margin-bottom: 20px;
+            margin-top: 10px; margin-bottom: 10px;
             font-weight:500; font-size:1.2rem; letter-spacing: 3px;
         }
         .#dis > p, #gen > p{
             font-family: 'Noto Sans KR', sans-serif;
             margin-top:20px;
             font-weight:300; font-size:1.4rem; letter-spacing: 3px;
-        }
-        #user > p{
-            font-family: 'Noto Sans KR', sans-serif;
-            margin-top:20px;
-            font-weight:300; font-size:1.4rem; letter-spacing: 3px;
-            white-space: nowrap;
-            overflow-x: auto;
         }
         #maincontent>p{
             font-family: 'Noto Sans KR', sans-serif;
@@ -163,15 +157,17 @@
         }
         [name="slide"] {display:none;}
         .slidebox{
-            max-width: 800px;
+            max-width: 1000px;
             width: 100%;
             margin: 0 auto;
         }
         .slidebox img {max-width:100%;}
         .slidebox .slidelist{
             white-space: nowrap;
-            font-size: 0;
             overflow: hidden;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight:300; font-size:1.2rem; letter-spacing: 3px;
+            margin-bottom: 0px;
         }
         .slidebox .slideitem{
             position: relative;
@@ -191,32 +187,19 @@
         }
         label.left{
             left: 40px;
-            background-color: white;
+            background-color: #ffffff;
             background-image: url('left.png');
             background-position: center center;
             background-size: 50%;
             background-repeat: no-repeat;
-            margin-right: 100px;
         }
         label.right{
             right: 40px;
-            background-color: white;
+            background-color: #ffffff;
             background-image: url('right.png');
             background-position: center center;
             background-size: 50%;
             background-repeat: no-repeat;
-            margin-left: 100px;
-        }
-        @keyframes slide01{
-            0% {left:0%;}
-            23% {left:0%;}
-            25% {left:-100%;}
-            48% {left:-100%;}
-            50% {left:-200%;}
-            73% {left:-200%;}
-            75% {left:-300%;}
-            98% {left:-300%;}
-            100% {left:0%;}
         }
         [id="slide01"]:checked ~ .slidelist .slideitem {transform:translateX(0);animation:slide01 20s infinite;}
         [id="slide02"]:checked ~ .slidelist .slideitem {transform:translateX(-100%);}
@@ -277,6 +260,7 @@
                         <label for="slide03" class="left"></label>
                         <label for="slide02" class="right"></label>
                         <a><img src="ex_1.png"></a>
+                        <p>분석 1에 대한 설명</p>
                     </div>
                 </li>
                 <li class="slideitem">
@@ -284,6 +268,7 @@
                         <label for="slide01" class="left"></label>
                         <label for="slide03" class="right"></label>
                         <a><img src="ex_2.png"></a>
+                        <p>분석 2에 대한 설명</p>
                     </div>
                 </li>
                 <li class="slideitem">
@@ -291,6 +276,7 @@
                         <label for="slide02" class="left"></label>
                         <label for="slide01" class="right"></label>
                         <a><img src="ex_3.png"></a>
+                        <p>분석 3에 대한 설명</p>
                     </div>
                 </li>
             
