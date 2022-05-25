@@ -1,3 +1,4 @@
+
 @charset "utf-8";
 header>h1{
     margin-left:3%;
@@ -31,12 +32,13 @@ header{
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    /*border-bottom: solid 1px black;*/
+    border-bottom: solid 1px black;
     top:0; left:0;
     z-index: 2;
 }
 body{
     padding-top:60px;
+    background-color: rgb(247, 236, 219);
     margin-left: 0; margin-right: 0;
     padding-left: 0; padding-right: 0;
 }
@@ -63,115 +65,116 @@ ul>li>a{
 }
 
 #maincontent{
-    width: 100%;/*672*/
-    height: 672px;
-    padding-top: .01px;
-    position:relative;
-    font-family: 'Nanum Gothic Coding', monospace;
-    /* border: 4px solid red; */
-    /*background: linear-gradient(90deg, white 20%, rgb(205, 198, 163) 0%);*/
-    overflow: hidden;
-    z-index: 1;
-}
-#maincontent::after{
-    width:100%;
-    height: 672px;
-    background-image: url('subimg/analysis.jpg');
-    background-size: 90%;
-    top: 0;
-    left: 20%;
-    background-repeat: no-repeat;
-    content: "";
-    position: absolute;
-    z-index: -1;
-    opacity: 80%;
-}
-#maincontent h1{
-    /* font-family: 'Noto Sans KR', sans-serif; */
-    color: #ffffff;
-    font-size: 5rem;
-    margin-left: 24%;
-    opacity: 40%;
-}
-#maincontent .buts{
-    margin-left: 37%;
-    position: relative;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 0.9rem; font-weight: 400;
-}
-#maincontent .but{
-    width: 20%;
-    height: 200px;
-    background-color: white;
-    display: inline-block;
-    margin-left: 0%;
-    margin-top: 28px; margin-left: 2%;
-    text-align: center;
-    padding-top: 20px;
-    line-height: 3em;
-    cursor:pointer;
-}
-#maincontent .but:hover{
-    box-shadow: 1px 1px 15px 2px black;
-}
-#maincontent #mbt1{
-    background-image: url('subimg/user.png');
-    background-size: 55%;
-    background-repeat: no-repeat;
-    background-position: center 80px;
-}
-#maincontent #mbt2{
-    background-image: url('subimg/distance.png');
-    background-size: 40%;
-    background-repeat: no-repeat;
-    background-position: center 80px;
-}
-#maincontent #mbt3{
-    background-image: url('subimg/pie-chart.png');
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: center 80px;
-}
-#maincontent hr{
-    border: 1.5px solid rgb(80, 190, 72);
-    width: 5%;
-    margin-left: 91.4%;
-    margin-top: 140px;
-    margin-bottom: -8px;
-}
-#maincontent h2{
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight:300; font-size: 1rem; letter-spacing: 1px;
-    color: white;
-    margin-right: 3%;
-    text-align: right;
-}
-
-
-.content{
     width: 100%;
-    height: 672px;
+    height: 560px;
+    padding-top: .01px;
     position:static;
     font-family: 'Nanum Gothic Coding', monospace;
+    /* border: 4px solid red; */
+}
+#maincontent .sub_text{
+    /* font-family: 'Noto Sans KR', sans-serif; */
+    position: relative;
+    color:rgb(144, 176, 89);
+    font-size:6rem;
+    margin-top: -50px;
+    margin-left: 8%;
+    opacity: 50%;
+}
+#maincontent .title_text{
+    margin-top: 40px;
+    font-weight: 500; font-size:1.4rem; letter-spacing: 2px;
+    margin-left: 24%;
+}
+#maincontent>h2{
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-top: 10px;
+    line-height: 0.5em;
+    font-weight:300; font-size:0.9rem; letter-spacing: 2px;
+    margin-left: 24%;
+}
+#maincontent hr{
+    border: 2px solid rgb(144, 176, 89);
+    width:0.1px;
+    height: 50px;
+    margin-left: 23%;
+    margin-top: -60px;
+}
+/*#maincontent .but{
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 100px;
+    height: 100px;
+    font-size:0.9rem; letter-spacing: 1px; font-weight:500;
+    background-color:rgb(144, 176, 89); color:white;
+    cursor: pointer;
+    border: 0px;
+    border-radius: 10%;
+}*/
+#mbt1{
+    font-family: 'Noto Sans KR', sans-serif;
+    background: linear-gradient(350deg, rgb(144, 176, 89) 0%, rgb(205, 198, 163) 90%);
+    color: white;
+    border: 0px;
+    border-radius: 10px;
+    width: 13%;
+    font-size:0.9rem; letter-spacing: 1px; font-weight:400;
+    padding-top: 7px; padding-bottom: 7px;
+    margin-left: 10%;
+    margin-top: 100px;
+    margin-right:20px;
+}
+#mbt2{
+    font-family: 'Noto Sans KR', sans-serif;
+    background: linear-gradient(350deg, rgb(144, 176, 89) 0%, rgb(205, 198, 163) 90%);
+    color: white;
+    border: 0px;
+    border-radius: 10px;
+    width: 12%;
+    font-size:0.9rem; letter-spacing: 1px; font-weight:400;
+    padding-top: 7px; padding-bottom: 7px;
+    margin-right:20px;
+}
+#mbt3{
+    font-family: 'Noto Sans KR', sans-serif;
+    background: linear-gradient(350deg, rgb(144, 176, 89) 0%, rgb(205, 198, 163) 90%);
+    color: white;
+    border: 0px;
+    border-radius: 10px;
+    width: 12%;
+    font-size:0.9rem; letter-spacing: 1px; font-weight:400;
+    padding-top: 7px; padding-bottom: 7px;
+}
+.f_sector{
+    width: 100%;
+    height:112px;
+    background-color: white;
+    margin-left: 20%;
+    cursor: pointer;
+    background-image: url('subimg/bycicle.png');
+    background-size: 4%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.content{
+    width: 100%;
+    height: 673px;
+    position:static;
+    font-family: 'Nanum Gothic Coding', monospace;
+    margin-bottom: 100px;
     text-align: center;
     font-weight:300; font-size:1.2rem; letter-spacing: 3px;
-}
-.content #user{
-    /*background: linear-gradient(90deg, rgb(80, 190, 72) 20%, white 0%);*/
-    width:100%;
-    height: 672px;
-    background-color: green;
 }
 .content>h1{
     font-family: 'Noto Sans KR', sans-serif;
     text-align: center;
-    color: black;
+    color: white;
     font-size:2rem;
+    margin-top: 15px;
     margin-bottom: 15px;
 }
 .content>h2{
     font-family: 'Noto Sans KR', sans-serif;
-    color: ;
+    color: white;
     margin-top: 10px;
     line-height: 0.5em;
     font-weight:300; font-size:0.9rem; letter-spacing: 3px;
@@ -188,16 +191,11 @@ ul>li>a{
 
 [name="slide"] {display:none;}
 .slidebox{
-    width: 80%;
-    margin-left: 20%;
-    margin-top: 100px;
-    background-color: transparent;
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
 }
 .slidebox img {max-width:100%;}
-.slidebox p {
-    font-size: 0.9rem;
-    line-height: 4em;
-}
 .slidebox .slidelist{
     white-space: nowrap;
     overflow: hidden;

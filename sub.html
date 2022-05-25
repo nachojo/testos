@@ -9,10 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Gothic+Coding:wght@400;700&family=Noto+Sans+KR:wght@100;300;400;500&family=Water+Brush&display=swap" rel="stylesheet">
     <!-- <meta name="viewport" content="width=device-width, height=device-height,initial-scale=1.0"> -->
     <link rel="stylesheet" href="subcs.css" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script type="text/javascript">
         function scroll_ev1(){
             const move_sw = document.querySelector("#user").offsetTop;
-            window.scrollTo({ top: move_sw, behavior:"smooth" });
+            window.scrollTo({ left: 0, top: 690, behavior:"smooth" });
         }
         function scroll_ev2(){
             const move_sw = document.querySelector("#dis").offsetTop;
@@ -44,15 +46,16 @@
     </header>
 
     <div id = "maincontent">
-        <h2>서울 각 구의 따릉이 상세 정보를 볼 수 있습니다</h2>
         <h1>SUB-ANALYSIS</h1>
-        <div class="btns">
-            <button class = "but" id="mbt1" onclick="scroll_ev1()">신규 가입 vs 실제 이용자</button>
-            <button class = "but" id="mbt2" onclick="scroll_ev2()">운동량 vs 이동거리</button>
-            <button class = "but" id="mbt3" onclick="scroll_ev3()">성별/연령별 이용률</button>
+        <div class="buts">
+            <div class="but" onclick="scroll_ev1()" id="mbt1">신규 가입 vs 실제 이용자</div>
+            <div class="but" onclick="scroll_ev2()" id="mbt2">운동량 vs 이동거리</div>
+            <div class="but" onclick="scroll_ev3()" id="mbt3">성별/연령별 이용률</div>
         </div>
+        <hr class="animate__animated animate__fadeInUp"/>
+        <h2 class="animate__animated animate__fadeInUp">서울 각 구의 따릉이 상세 정보를 볼 수 있습니다.<br>메뉴를 클릭하면 상세 페이지로 이동합니다.</h2>
+
     </div>
-    <div class="f_sector"></div>
     <div class = "content" id = "user">
         <h1>신규 가입 vs 실제 이용자</h1>
         <h2> 따릉이 신규 가입자와 실제 이용자를 확인할 수 있습니다</h2>
@@ -73,7 +76,7 @@
                     <div>
                         <label for="slide01" class="left"></label>
                         <label for="slide03" class="right"></label>
-                        <a><img src="subimg/ex_2.png"></a>
+                        <a><img src="subimg/ex_1.png"></a>
                         <p>분석 2에 대한 설명</p>
                     </div>
                 </li>
@@ -90,6 +93,7 @@
         <button class = "but1" onclick="scroll_ev2()">운동량 vs 이동거리</button>
         <button class = "but1" onclick="scroll_ev3()">성별/연령별 이용률</button>
     </div>
+    
     <div class = "content" id = "dis">
         <h1>운동량 vs 이동거리</h1>
         <h2> 따릉이를 통한 운동량과 이동 거리의 상관관계를 확인할 수 있습니다</h2>
@@ -163,7 +167,10 @@
         </div>
         <button class = "but1" onclick="scroll_ev1()"> 신규 가입 vs 실제 이용자 ></button>
         <button class = "but1" onclick="scroll_ev2()"> 운동량 vs 이동거리 ></button>
-    </div>
-    
+    </div>*/
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 </body>
 </html>
