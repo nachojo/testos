@@ -7,7 +7,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Gothic+Coding:wght@400;700&family=Noto+Sans+KR:wght@100;300;400;500&family=Water+Brush&display=swap" rel="stylesheet">
-    <!-- <meta name="viewport" content="width=device-width, height=device-height,initial-scale=1.0"> -->
     <link rel="stylesheet" href="sub.css">
 </head>
 <body>
@@ -26,41 +25,21 @@
     <div id = "content">
         <h2> 서울 각 구의 따릉이 상세정보를 볼 수 있습니다</h2>
         <h1>SUB-ANALYSIS</h1>
-	</div>    
+		
         <div id = "submenu">
             <button id = "active"><a href="sub.html">rental location</a></button>
             <button><a href="sub2.html">utilization</a></button>
         </div>
-		<div class="slidebox">
-            <input type="radio" name="slide" id="slide01">
-            <input type="radio" name="slide" id="slide02">
-            <input type="radio" name="slide" id="slide03">
-            <ul class="slidelist">
-                <li class="slideitem">
-                    <div>
-                        <label for="slide02" class="left"></label>
-                        <label for="slide02" class="right"></label>
-                        <article>
-                            <h1>rental location</h1>
-                            (1)평균 이동거리 상위 10개의 대여소<br>
-							<br>평균 이동거리 상위 10개의 대여소를<br>시각자료로 확인할 수 있습니다
-                        </article>
-                        <a><img src="subimg/dis.png"></a>
-                    </div>
-                </li>
-                <li class="slideitem">
-                    <div>
-                        <label for="slide01" class="left"></label>
-                        <label for="slide01" class="right"></label>
-                        <article>
-                            <h1>rental location</h1>
-							(2)평균 이용시간 상위 10개의 대여소<br><br>
-                            평균 이용시간 상위 10개의 대여소를<br>시각자료로 확인할 수 있습니다
-                        </article>
-                        <a><img src="subimg/time.png"></a>
-                    </div>
-                </li>
-            </ul>
-        </div>
+        <section id = "map_content">
+            <article>
+                <h1>rental location</h1>
+                (1)평균 이동거리 상위 10개의 대여소<br><br>
+				평균 이동거리 상위 10개의 대여소를<br>시각자료로 확인할 수 있습니다<br><br>
+				<button id="btn1"><a href="sub.html">이동거리</a></button>
+				<button id="btn2"><a href="sub1.html">이용시간</a></button>
+			</article>
+			<img src="subimg/dis.png">
+	   </section>
+	</div>
 </body>
 </html>
