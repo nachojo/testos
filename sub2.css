@@ -153,7 +153,7 @@ ul>li>a{
     margin-top: 2.7%;
 }
 .slidebox img {
-    width:25%; margin-left:57%;
+    width:25%; margin-left:53%;
 }
 .slidebox .slidelist{
     white-space: nowrap;
@@ -170,6 +170,7 @@ ul>li>a{
     text-align: left;
     line-height: 2em; font-size:1.2rem;
     left: 9.2%; top: 6.1%;
+	margin-left: 10%;
 }
 .slideitem article h1{
     font-family: 'Noto Sans KR', sans-serif;
@@ -192,7 +193,7 @@ ul>li>a{
     opacity: 0.5;
 }
 label.left{
-    left: 46%;
+    left: 4%;
     background-color: transparet;
     background-image: url('subimg/left.png');
     background-position: center center;
@@ -200,7 +201,7 @@ label.left{
     background-repeat: no-repeat;
 }
 label.right{
-    right: 9%;
+    right: 7%;
     background-color: transparet;
     background-image: url('subimg/right.png');
     background-position: center center;
