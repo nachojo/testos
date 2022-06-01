@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>region : map</title>
+    <title>region : density</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Gothic+Coding:wght@400;700&family=Noto+Sans+KR:wght@100;300;400;500&family=Water+Brush&display=swap" rel="stylesheet">
     <!-- <meta name="viewport" content="width=device-width, height=device-height,initial-scale=1.0"> -->
-    <link rel="stylesheet" href="region.css">
+    <link rel="stylesheet" href="region2.css">
 </head>
 <body>
     <header id = "menubar">
@@ -28,31 +28,32 @@
         <h1>REGIONAL BIKE STATUS</h1>
         
         <div id = "submenu">
-            <button id = "active"><a href="region.html">map</a></button>
+            <button><a href="region.html">map</a></button>
             <button><a href="region-4.html">status</a></button>
             <button><a href="region-3.html">trend</a></button>
             <button><a href="region-1.html">mean distance</a></button>
-            <button><a href="region-2.html">density</a></button>
+            <button id = "active"><a href="region-2.html">density</a></button>
         </div>
 
         <section id = "map_content">
             <article>
-                <h1>map</h1>
-                서울 지도의 구별 마커를 통해<br>
-                각 구의 상세정보를 확인할 수 있습니다<br><br>
-
-                <li>1. 대여소 수</li>
-                <li>2. 거치대 수</li>
-                <li>3. 총 대여 건 수</li>
+                <h1>density</h1>
                 
+                각 구 별 대여소의 밀집도를<br>
+                시각 자료로 확인할 수 있습니다<br><br>
+                <button id="btn1">강남구 - 구로구</button> 
+                <button id="btn2">금천구 - 도봉구</button>
+                <button id="btn3">동대문구 - 서초구</button><br> 
+                <button id="btn4">성동구 - 영등포구</button>
+                <button id="btn5">용산구 - 중랑구</button> 
+                <!-- <button id="btn6">금천구</button> -->
             </article>
-            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1-YB6tuaZfOBf2h95jw8B7RvhLs0TmkKB&ehbc=2E312F" ></iframe>
+           <img src="밀집도1.png">
+           <script src="region2.js"></script>
         </section>
-        <!-- <button id = "gomap"><a href="#map">go to map ></a></button> -->
+      
     </div>
     
-    <!-- <div id = "map">
-        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1-YB6tuaZfOBf2h95jw8B7RvhLs0TmkKB&ehbc=2E312F" ></iframe>
-    </div> -->
+
 </body>
 </html>
